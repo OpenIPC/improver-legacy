@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenIPC Configurator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="tab-container">
+      <div class="tabs">
+        <button class="tab-button active" data-tab="wfb-settings">WFB Settings</button>
+        <button class="tab-button" data-tab="camera-settings">Camera Settings</button>
+        <button class="tab-button" data-tab="telemetry">Telemetry</button>
+        <button class="tab-button" data-tab="vrx">VRX</button>
+        <button class="tab-button" data-tab="setup">Setup</button>
+        <button class="tab-button" data-tab="osd">OSD</button>
+      </div>
+      <div class="tab-content-box">
+        <div id="wfb-settings" class="tab-content-item active">
+          <form id="wfb-form">
+            <div class="form-group">
+              <label for="combo58Freq">Select 5.8GHz Frequencey</label>
+              <select id="combo58Freq" class="combo-box">
+                <option value="" disabled selected>Select 5.8GHz Frequency</option>
+                <option value="5180 MHz [36]">5180 MHz [36]</option>
+                <option value="5200 MHz [40]">5200 MHz [40]</option>
+                <option value="5220 MHz [44]">5220 MHz [44]</option>
+                <option value="5240 MHz [48]">5240 MHz [48]</option>
+                <option value="5260 MHz [52]">5260 MHz [52]</option>
+                <option value="5280 MHz [56]">5280 MHz [56]</option>
+                <option value="5300 MHz [60]">5300 MHz [60]</option>
+                <option value="5320 MHz [64]">5320 MHz [64]</option>
+                <option value="5500 MHz [100]">5500 MHz [100]</option>
+                <option value="5520 MHz [104]">5520 MHz [104]</option>
+                <option value="5540 MHz [108]">5540 MHz [108]</option>
+                <option value="5560 MHz [112]">5560 MHz [112]</option>
+                <option value="5580 MHz [116]">5580 MHz [116]</option>
+                <option value="5600 MHz [120]">5600 MHz [120]</option>
+                <option value="5620 MHz [124]">5620 MHz [124]</option>
+                <option value="5640 MHz [128]">5640 MHz [128]</option>
+                <option value="5660 MHz [132]">5660 MHz [132]</option>
+                <option value="5680 MHz [136]">5680 MHz [136]</option>
+                <option value="5700 MHz [140]">5700 MHz [140]</option>
+                <option value="5720 MHz [144]">5720 MHz [144]</option>
+                <option value="5745 MHz [149]">5745 MHz [149]</option>
+                <option value="5765 MHz [153]">5765 MHz [153]</option>
+                <option value="5785 MHz [157]">5785 MHz [157]</option>
+                <option value="5805 MHz [161]">5805 MHz [161]</option>
+                <option value="5825 MHz [165]">5825 MHz [165]</option>
+                <option value="5845 MHz [169]">5845 MHz [169]</option>
+                <option value="5865 MHz [173]">5865 MHz [173]</option>
+                <option value="5885 MHz [177]">5885 MHz [177]</option>
+              </select>
+              <input type="text" id="txt58Freq" class="text-field" readonly>
+            </div>
+            <!-- Repeat for all 9 combo boxes -->
+            <div class="form-group">
+              <label for="combo58TXPwr">Select 5.8GHz TX Power:</label>
+              <select id="combo58TXPwr" class="combo-box">
+                <option value="" disabled selected>Select 5.8GHz TX Power</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="25">25</option>
+                <option value="30">30</option>
+                <option value="35">35</option>
+                <option value="40">40</option>
+                <option value="45">45</option>
+                <option value="50">50</option>
+                <option value="55">55</option>
+                <option value="58">58</option>
+                <option value="60">60</option>
+                <option value="63">63</option>
+              </select>
+              <input type="text" id="txt58TXPwr" class="text-field" readonly>
+            </div>
+            <!-- ... Add more combo boxes and text fields here ... -->
+            <div class="form-group">
+              <label for="combo24Freq">Select 2.4GHz Frequencey:</label>
+              <select id="combo24Freq" class="combo-box">
+                <option value="" disabled selected>Select 2.4GHz Frequency</option>
+                <option value="2412 MHz [1]">2412 MHz [1]</option>
+                <option value="2417 MHz [2]">2417 MHz [2]</option>
+                <option value="2422 MHz [3]">2422 MHz [3]</option>
+                <option value="2427 MHz [4]">2427 MHz [4]</option>
+                <option value="2432 MHz [5]">2432 MHz [5]</option>
+                <option value="2437 MHz [6]">2437 MHz [6]</option>
+                <option value="2442 MHz [7]">2442 MHz [7]</option>
+                <option value="2447 MHz [8]">2447 MHz [8]</option>
+                <option value="2452 MHz [9]">2452 MHz [9]</option>
+                <option value="2457 MHz [10]">2457 MHz [10]</option>
+                <option value="2462 MHz [11]">2462 MHz [11]</option>
+                <option value="2467 MHz [12]">2467 MHz [12]</option>
+                <option value="2472 MHz [13]">2472 MHz [13]</option>
+                <option value="2484 MHz [14]">2484 MHz [14]</option>
+              </select>
+              <input type="text" id="txt24Freq" class="text-field" readonly>
+            </div>
+            <!-- Repeat for all 9 combo boxes -->
+            <div class="form-group">
+              <label for="combo24TXPwr">Select 2.4GHz TX Power:</label>
+              <select id="combo24TXPwr" class="combo-box">
+                <option value="" disabled selected>Select 2.4GHz TX Power</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="25">25</option>
+                <option value="30">30</option>
+                <option value="35">35</option>
+                <option value="40">40</option>
+                <option value="45">45</option>
+                <option value="50">50</option>
+                <option value="55">55</option>
+                <option value="58">58</option>
+                <option value="60">60</option>
+                <option value="63">63</option>
+              </select>
+              <input type="text" id="txt24TXPwr" class="text-field" readonly>
+            </div>
+            <div class="form-group">
+            <label for="comboMCSIndex">Select MCS INDEX</label>
+            <select id="comboMCSIndex" class="combo-box">
+              <option value="" disabled selected>Select MCS INDEX</option>
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30">30</option>
+              <option value="31">31</option>
+            </select>
+            <input type="text" id="txtMCSIndex" class="text-field" readonly>
+          </div>
+
+
+            <div class="form-buttons">
+              <button type="button" id="save-wfb">Save</button>
+              <button type="button" id="restart-wfb">Restart WFB</button>
+            </div>
+          </form>
+        </div>
+        <div id="camera-settings" class="tab-content-item">
+          <p>Content for Camera Settings goes here.</p>
+        </div>
+        <div id="telemetry" class="tab-content-item">
+          <p>Content for Telemetry goes here.</p>
+        </div>
+        <div id="vrx" class="tab-content-item">
+          <p>Content for VRX goes here.</p>
+        </div>
+        <div id="setup" class="tab-content-item">
+          <p>Content for Setup goes here.</p>
+        </div>
+        <div id="osd" class="tab-content-item">
+          <p>Content for OSD goes here.</p>
+        </div>
+      </div>
+    </div>
+    <div class="control-panel">
+      <div class="radio-buttons">
+        <label><input type="radio" name="device" value="OpenIPC Camera"> OpenIPC Camera</label>
+        <label><input type="radio" name="device" value="NVR"> NVR</label>
+        <label><input type="radio" name="device" value="Radxa"> Radxa</label>
+      </div>
+      <div class="input-fields">
+        <label for="ip-address">IP Address:</label>
+        <input type="text" id="ip-address" name="ip-address">
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+
+        <label for="soc">SOC:</label>
+        <input type="text" id="soc" name="soc">
+      </div>
+      <div class="buttons">
+        <button id="fetch">Fetch</button>
+        <button id="read">Read</button>
+        <button id="save">Save</button>
+        <button id="reboot">Reboot</button>
+        <button id="upload">Upload</button>
+        <button id="temperature">Temperature</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

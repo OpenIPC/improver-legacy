@@ -1,0 +1,16 @@
+
+
+
+xwindows
+ForwardAgent yes
+ForwardX11 yes
+ForwardX11Trusted yes
+
+
+sudo apt install xvfb x11-apps
+
+
+export DISPLAY=localhost:10.0 
+
+test:
+xclock
