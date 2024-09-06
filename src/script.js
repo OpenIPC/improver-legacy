@@ -151,7 +151,7 @@ document.getElementById('comboFecN').addEventListener('change', (event) => {
 
 document.getElementById('save-wfb').addEventListener('click', async () => {
     console.log('Save WFB button clicked');
-    const filename = 'wfb.conf'; // Example filename, change as needed
+    const filename = 'conf/wfb.conf'; // Example filename, change as needed
     
 
     // Get the values from each textbox
@@ -169,10 +169,8 @@ document.getElementById('save-wfb').addEventListener('click', async () => {
     const wfbText = `${txt58TXPwr}\n${txt24TXPwr}\n${txt58Freq}\n${txt24Freq}\n${txtMCSIndex}\n${txtStbc}\n${txtLdpc}\n${txtFecK}\n${txtFecN}`;
 
     try {
-        //const exists = await window.api.fileExists(filename);
-        console.log("before");
+
         const exists = await window.api.fileExists(filename);
-        console.log("after");
 
         if (exists) {
             // File exists, proceed with saving

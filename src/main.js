@@ -18,12 +18,13 @@ function createWindow() {
       preload: path.join(__dirname, 'preload.js'), // Ensure this path is correct
       enableRemoteModule: false,
       nodeIntegration: false
-    }
+    },
+    icon: path.join(__dirname, 'assets/icons/openipc.png') // Change this to your icon path
 
     
   });
 
-  mainWindow.loadFile('index.html'); // Ensure index.html is in the correct directory
+  mainWindow.loadFile('src/index.html'); // Ensure index.html is in the correct directory
   //mainWindow.loadURL('http://localhost:8080'); // URL served by http-server
   console.log('Window created and URL loaded');
 }

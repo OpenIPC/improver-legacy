@@ -32,13 +32,54 @@ Then click Upload to send the settings to the camera/NVR/Radxa Zero 3w.
 
 ![alt text](./images/configurator.png)
 
+### Mac
+
+![alt text](./images/openipc-control-suite.png)
+
+
+
+## Build
+npm run build
+
+* For macOS
+    ```bash
+    npx electron-packager . my-electron-app --platform=darwin --arch=x64 --out=dist/
+    ```
+
+* For Windows
+    ```shell
+    npx electron-packager . my-electron-app --platform=win32 --arch=x64 --out=dist/
+    ```
+
+* For Linux
+    ```bash
+    npx electron-packager . my-electron-app --platform=linux --arch=x64 --out=dist/
+    ```
+
+
+
+## Debug
+
+
+
+
+
+## Running dependencies
+
+sshpass
+
+
+
+## Development
 
 #### Ubuntu
 
 sudo apt install libgbm1 libasound2
 
+### Mac and Linux
 
 headless setup x11
+
 Install Xvfb:
 ```bash
 sudo apt-get install xvfb
@@ -63,16 +104,3 @@ Run Your Electron App:
 ```bash
 npm start
 ```
-
-## Build
-npm run build
-
-## Debug
-
-
-
-
-
-## Running dependencies
-
-sshpass
