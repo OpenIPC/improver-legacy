@@ -45,3 +45,8 @@ Run Your Electron App:
 ```bash
 npm start
 ```
+
+## Build
+npm run build
+
+## Debug
