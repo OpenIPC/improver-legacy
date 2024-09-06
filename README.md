@@ -1,7 +1,10 @@
 # OpenIPC Configurator
+
 OpenIPC Configurator for setting up FPV and URLLC devices
 
+*This is a work in progress.*
 
+Idea was to create a multiplatform application that can run anywhere (Windows, Mac or Linux).
 
 
 ## Setup
