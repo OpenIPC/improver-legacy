@@ -101,7 +101,51 @@ document.getElementById('comboMCSIndex').addEventListener('change', (event) => {
     if (textField) {
         textField.value = `mcs_index=${selectedValue}`;
     } else {
-        console.error('Text field not found: txt24TXPwr');
+        console.error('Text field not found: txtMCSIndex');
+    }
+});
+
+document.getElementById('comboStbc').addEventListener('change', (event) => {
+    const selectedValue = event.target.value;
+    const textField = document.getElementById('txtStbc'); // Assuming the text field has ID 'textBox2'
+    
+    if (textField) {
+        textField.value = `stbc=${selectedValue}`;
+    } else {
+        console.error('Text field not found: txtStbc');
+    }
+});
+
+document.getElementById('comboLdpc').addEventListener('change', (event) => {
+    const selectedValue = event.target.value;
+    const textField = document.getElementById('txtLdpc'); // Assuming the text field has ID 'textBox2'
+    
+    if (textField) {
+        textField.value = `ldpc=${selectedValue}`;
+    } else {
+        console.error('Text field not found: txtLdpc');
+    }
+});
+
+document.getElementById('comboFecK').addEventListener('change', (event) => {
+    const selectedValue = event.target.value;
+    const textField = document.getElementById('txtFecK'); // Assuming the text field has ID 'textBox2'
+    
+    if (textField) {
+        textField.value = `fec_k=${selectedValue}`;
+    } else {
+        console.error('Text field not found: txtFecK');
+    }
+});
+
+document.getElementById('comboFecN').addEventListener('change', (event) => {
+    const selectedValue = event.target.value;
+    const textField = document.getElementById('txtFecN'); // Assuming the text field has ID 'textBox2'
+    
+    if (textField) {
+        textField.value = `fec_n=${selectedValue}`;
+    } else {
+        console.error('Text field not found: txtFecN');
     }
 });
 
@@ -109,7 +153,20 @@ document.getElementById('save-wfb').addEventListener('click', async () => {
     console.log('Save WFB button clicked');
     const filename = 'wfb.conf'; // Example filename, change as needed
     
-    console.log('window.api:', window.api); // Check if window.api is defined
+
+    // Get the values from each textbox
+    const txt58TXPwr = document.getElementById('txt58TXPwr').value;
+    const txt24TXPwr = document.getElementById('txt24TXPwr').value;
+    const txt58Freq = document.getElementById('txt58Freq').value;
+    const txt24Freq = document.getElementById('txt24Freq').value;
+    const txtMCSIndex = document.getElementById('txtMCSIndex').value;
+    const txtStbc = document.getElementById('txtStbc').value;
+    const txtLdpc = document.getElementById('txtLdpc').value;
+    const txtFecK = document.getElementById('txtFecK').value;
+    const txtFecN = document.getElementById('txtFecN').value;
+
+    // Combine the values with newline breaks
+    const wfbText = `${txt58TXPwr}\n${txt24TXPwr}\n${txt58Freq}\n${txt24Freq}\n${txtMCSIndex}\n${txtStbc}\n${txtLdpc}\n${txtFecK}\n${txtFecN}`;
 
     try {
         //const exists = await window.api.fileExists(filename);
@@ -119,11 +176,11 @@ document.getElementById('save-wfb').addEventListener('click', async () => {
 
         if (exists) {
             // File exists, proceed with saving
-            await window.api.createFile(filename, content);
+            await window.api.createFile(filename, wfbText);
             console.log('File saved successfully');
         } else {
             console.log('File does not exist. Creating new file.');
-            await window.api.createFile(filename, content);
+            await window.api.createFile(filename, wfbText);
             console.log('File created and saved successfully');
         }
     } catch (error) {

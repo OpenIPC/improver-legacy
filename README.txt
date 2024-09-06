@@ -40,6 +40,11 @@ Set the DISPLAY Variable:
 export DISPLAY=:99
 ```
 
+Setup
+```bash
+npm install
+```
+
 Run Your Electron App:
 
 ```bash
