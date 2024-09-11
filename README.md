@@ -1,6 +1,6 @@
-# OpenIPC Configurator
+# OpenIPC Improver
 
-OpenIPC Configurator for setting up FPV and URLLC devices
+OpenIPC Improver for setting up FPV and URLLC devices
 
 *This is a work in progress.*
 
@@ -12,11 +12,11 @@ Idea was to create a multiplatform application that can run anywhere (Windows, M
 
 ### Windows
 
-Please download and install PuTTy before running the Configurator
+Please download and install PuTTy before running the Improver
 
 ---
 
-Run the "OpenIPC Configurator.exe" file.
+Run the "OpenIPC Improver.exe" file.
 
 Enter the IP of the camera/NVR/Radxa Zero 3w.
 
