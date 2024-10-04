@@ -1,6 +1,6 @@
 # OpenIPC Improver
 
-OpenIPC Improver for setting up FPV and URLLC devices
+OpenIPC Improver (legacy) for setting up FPV and URLLC devices
 
 *This is a work in progress.*
 
